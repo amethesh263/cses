@@ -1,4 +1,4 @@
-/* RESET (for consistency across browsers) */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,31 +10,24 @@ body {
   background-color: #f4f4f4;
 }
 
-/* ====== CONTAINER ====== */
+/* ===== NAVIGATION BAR ===== */
+#main-nav {
+  background-color: #333; /* ✅ Solid visible background */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+}
+
+/* ===== CONTAINER ===== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
-
-/* ====== NAVBAR ====== */
-nav {
-  background-color: #333;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  z-index: 1000; /* ✅ Keeps navbar visible above dropdowns */
-}
-
-#main-nav {
-  background-color: #333;
-  position: relative;
-  z-index: 1000;
-}
-
 
 .nav-inner {
   display: flex;
@@ -43,6 +36,7 @@ nav {
   width: 100%;
 }
 
+/* ===== NAV LINKS ===== */
 .nav-links {
   display: flex;
   align-items: center;
@@ -69,7 +63,7 @@ nav {
   border-radius: 2px;
 }
 
-/* ====== DROPDOWNS ====== */
+/* ===== DROPDOWN ===== */
 .dropdown {
   display: none;
   position: absolute;
@@ -95,7 +89,7 @@ nav {
   display: flex;
 }
 
-/* ====== SEARCH BOX ====== */
+/* ===== SEARCH BOX ===== */
 .search-box {
   display: flex;
   align-items: center;
@@ -107,13 +101,13 @@ nav {
   border-radius: 3px;
 }
 
-/* ====== HAMBURGER MENU ====== */
+/* ===== HAMBURGER ===== */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   width: 25px;
-  z-index: 1100; /* ✅ Keeps hamburger on top */
+  z-index: 1100;
 }
 
 .hamburger span {
@@ -135,7 +129,7 @@ nav {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ====== RESPONSIVE (MOBILE) ====== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .nav-inner {
     flex-wrap: wrap;
@@ -146,9 +140,9 @@ nav {
     top: 60px;
     left: 0;
     width: 100%;
-    background: #333;
+    background: #333; /* ✅ Keeps background solid in mobile too */
     flex-direction: column;
-    align-items: flex-start; /* ✅ Aligns left */
+    align-items: flex-start; /* left aligned */
     text-align: left;
     padding-left: 20px;
     max-height: 0;
@@ -191,7 +185,7 @@ nav {
   }
 }
 
-/* ====== PAGE CONTENT ====== */
+/* ===== CONTENT ===== */
 .content {
   background: white;
   margin-top: 20px;
