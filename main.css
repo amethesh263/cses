@@ -135,7 +135,7 @@
         width: 100%;
         background: #333;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out;
@@ -183,6 +183,6 @@
       line-height: 1.6;
     }
   </style>
-  <!-- ✅ END OF CSS -->
+  
 
 </head>
