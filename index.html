@@ -1,82 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Only Navbar</title>
-  <link rel="stylesheet" href="main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Navigation</title>
+
+<style>
+
+/* ============================================
+   BASIC NAVBAR STYLING
+   ============================================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f1f1;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    position: relative;
+}
+
+/* ============================================
+   HAMBURGER ICON
+   ============================================ */
+.hamburger {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    padding: 5px;
+}
+
+/* hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* ============================================
+   MENU BASE
+   ============================================ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #2f2f2f;
+    display: none;  /* Hidden on mobile */
+    border-radius: 8px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+/* ============================================
+   SHOW MENU WHEN CHECKBOX CHECKED
+   ============================================ */
+#menu-toggle:checked ~ ul {
+    display: block;
+}
+
+/* ============================================
+   DESKTOP MODE — HAMBURGER HIDDEN
+   ============================================ */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex !important;
+        background: none;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        border: none;
+    }
+
+    nav ul li a:hover {
+        background: #4cafaa;
+        border-radius: 6px;
+    }
+}
+
+/* ============================================
+   MAIN CONTENT (Your welcome box)
+   ============================================ */
+.container {
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav id="main-nav">
-    <div class="container nav-inner">
+<!-- ===============================
+     NAVIGATION BAR (NO JAVASCRIPT)
+     =============================== -->
+<nav>
 
-      <!-- Hidden checkbox (controls hamburger) -->
-      <input type="checkbox" id="menu-toggle">
+    <!-- checkbox toggle -->
+    <input type="checkbox" id="menu-toggle">
 
-      <!-- Hamburger icon -->
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+    <!-- hamburger icon -->
+    <label for="menu-toggle" class="hamburger">☰</label>
 
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-
-        <li class="dropdown-item">
-          <input type="checkbox" id="men-toggle">
-          <label for="men-toggle">Men</label>
-          <div class="dropdown">
-            <a href="#">Trousers</a>
-            <a href="#">Cargos</a>
-            <a href="#">Shirts</a>
-            <a href="#">Jackets</a>
-            <a href="#">Shoes</a>
-          </div>
-        </li>
-
-        <li class="dropdown-item">
-          <input type="checkbox" id="women-toggle">
-          <label for="women-toggle">Women</label>
-          <div class="dropdown">
-            <a href="#">Dresses</a>
-            <a href="#">Skirts</a>
-            <a href="#">Tops</a>
-            <a href="#">Jackets</a>
-            <a href="#">Shoes</a>
-          </div>
-        </li>
-
-        <li class="dropdown-item">
-          <input type="checkbox" id="kids-toggle">
-          <label for="kids-toggle">Kids</label>
-          <div class="dropdown">
-            <a href="#">T-Shirts</a>
-            <a href="#">Shorts</a>
-            <a href="#">Shoes</a>
-          </div>
-        </li>
-
+    <!-- menu items -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Kids</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Setting</a></li>
-      </ul>
+    </ul>
+</nav>
 
-      <div class="search-box">
-        <input type="text" placeholder="Search..">
-      </div>
 
-    </div>
-  </nav>
-
-  <div class="container content">
-    <h1>Welcome to Our Store</h1>
-    <p>Browse our categories for Men, Women, and Kids.</p>
-  </div>
+<!-- ===============================
+     MAIN CONTENT
+     =============================== -->
+<div class="container">
+    <h2>Welcome to Our Store</h2>
+    <p>Browse the categories for Men, Women, and Kids.</p>
+</div>
 
 </body>
 </html>
