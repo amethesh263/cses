@@ -29,8 +29,11 @@ body {
 
 .nav-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 40px; /* spacing between links and search bar */
+}
+
 }
 
 /* NAV LINKS */
