@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store Navigation</title>
-
-  <!-- LINK TO EXTERNAL CSS -->
+  <title>Responsive Navbar</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
   <!-- NAVIGATION -->
-  <nav>
-    <div class="container">
+  <nav id="main-nav">
+    <div class="container nav-inner">
 
-      <!-- HAMBURGER -->
+      <!-- Hamburger -->
       <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <!-- NAV LINKS -->
+      <!-- Links -->
       <ul class="nav-links" id="nav-links">
-        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
 
         <li>
           <a href="#">Men</a>
@@ -60,27 +60,18 @@
         <li><a href="#">Setting</a></li>
       </ul>
 
+      <!-- Search -->
       <div class="search-box">
         <input type="text" placeholder="Search..">
       </div>
-
     </div>
   </nav>
 
-  <div class="content">
+  <div class="container content">
     <h1>Welcome to Our Store</h1>
-    <p>Browse through our categories for Men, Women, and Kids to find the best fashion items for you.</p>
+    <p>Browse the categories for Men, Women, and Kids.</p>
   </div>
 
-  <!-- INLINE JS FOR MENU -->
-  <script>
-    const ham = document.getElementById("hamburger");
-    const nav = document.getElementById("nav-links");
-
-    ham.addEventListener("click", () => {
-      nav.classList.toggle("open");
-    });
-  </script>
 
 </body>
 </html>
