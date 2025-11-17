@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
+  <title>CSS Only Navbar</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -12,19 +12,23 @@
   <nav id="main-nav">
     <div class="container nav-inner">
 
-      <!-- Hamburger -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <!-- Hidden checkbox (controls hamburger) -->
+      <input type="checkbox" id="menu-toggle">
 
-      <!-- Links -->
-      <ul class="nav-links" id="nav-links">
+      <!-- Hamburger icon -->
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
         <li><a href="#" class="active">Home</a></li>
 
-        <li>
-          <a href="#">Men</a>
+        <li class="dropdown-item">
+          <input type="checkbox" id="men-toggle">
+          <label for="men-toggle">Men</label>
           <div class="dropdown">
             <a href="#">Trousers</a>
             <a href="#">Cargos</a>
@@ -34,8 +38,9 @@
           </div>
         </li>
 
-        <li>
-          <a href="#">Women</a>
+        <li class="dropdown-item">
+          <input type="checkbox" id="women-toggle">
+          <label for="women-toggle">Women</label>
           <div class="dropdown">
             <a href="#">Dresses</a>
             <a href="#">Skirts</a>
@@ -45,8 +50,9 @@
           </div>
         </li>
 
-        <li>
-          <a href="#">Kids</a>
+        <li class="dropdown-item">
+          <input type="checkbox" id="kids-toggle">
+          <label for="kids-toggle">Kids</label>
           <div class="dropdown">
             <a href="#">T-Shirts</a>
             <a href="#">Shorts</a>
@@ -60,20 +66,20 @@
         <li><a href="#">Setting</a></li>
       </ul>
 
-      <!-- Search -->
       <div class="search-box">
         <input type="text" placeholder="Search..">
       </div>
+
     </div>
   </nav>
 
   <div class="container content">
     <h1>Welcome to Our Store</h1>
-    <p>Browse the categories for Men, Women, and Kids.</p>
+    <p>Browse our categories for Men, Women, and Kids.</p>
   </div>
-
 
 </body>
 </html>
+
 
 
