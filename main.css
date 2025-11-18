@@ -142,41 +142,47 @@ summary:hover {
     border: none;
   }
 
-  /* Desktop dropdown: open on hover */
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown details {
-    position: static; /* container */
-  }
-
-  .dropdown details[open] > .dropdown-content {
-    display: block;
-  }
-
-  /* Simulate hover open by toggling open via CSS trick:
-     hide default marker and show submenu on hover */
-  .dropdown .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    background: #444;
-    border-radius: 6px;
-    z-index: 1000;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown-content li a:hover {
-    background: #4cafaa;
-  }
+  /* Dropdown container */
+.dropdown {
+  position: relative;
 }
+
+/* Hide dropdown content by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  min-width: 200px;
+  border-radius: 6px;
+  z-index: 1000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-content li a {
+  padding: 10px 12px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+}
+
+.dropdown-content li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-content li a:hover {
+  background: #4cafaa;
+  border-radius: 4px;
+}
+
 
 /* ============================================
    MAIN CONTENT
