@@ -9,67 +9,58 @@
 <body>
 
   <nav role="navigation">
-    <!-- checkbox toggle -->
-    <input type="checkbox" id="menu-toggle" aria-hidden="true">
+  <input type="checkbox" id="menu-toggle" aria-hidden="true">
+  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
 
-    <!-- hamburger icon -->
-    <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+  <ul class="menu">
+    <li><a href="#" class="active">Home</a></li>
 
-    <!-- menu items -->
-    <ul class="menu">
-      <li><a href="#" class="active">Home</a></li>
+    <!-- MEN DROPDOWN -->
+    <li class="dropdown">
+      <a href="#">Men</a>
+      <ul class="dropdown-content">
+        <li><a href="#">T-Shirts</a></li>
+        <li><a href="#">Jeans</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Jackets</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Sportswear</a></li>
+      </ul>
+    </li>
 
-      <!-- MEN DROPDOWN -->
-      <li class="dropdown">
-        <details>
-          <summary>Men</summary>
-          <ul class="dropdown-content">
-            <li><a href="#">T-Shirts</a></li>
-            <li><a href="#">Jeans</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">Jackets</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Sportswear</a></li>
-          </ul>
-        </details>
-      </li>
+    <!-- WOMEN DROPDOWN -->
+    <li class="dropdown">
+      <a href="#">Women</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Tops</a></li>
+        <li><a href="#">Skirts</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Handbags</a></li>
+        <li><a href="#">Jewelry</a></li>
+      </ul>
+    </li>
 
-      <!-- WOMEN DROPDOWN -->
-      <li class="dropdown">
-        <details>
-          <summary>Women</summary>
-          <ul class="dropdown-content">
-            <li><a href="#">Dresses</a></li>
-            <li><a href="#">Tops</a></li>
-            <li><a href="#">Skirts</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">Handbags</a></li>
-            <li><a href="#">Jewelry</a></li>
-          </ul>
-        </details>
-      </li>
+    <!-- KIDS DROPDOWN -->
+    <li class="dropdown">
+      <a href="#">Kids</a>
+      <ul class="dropdown-content">
+        <li><a href="#">T-Shirts</a></li>
+        <li><a href="#">Shorts</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">School Bags</a></li>
+        <li><a href="#">Hoodies</a></li>
+        <li><a href="#">Toys</a></li>
+      </ul>
+    </li>
 
-      <!-- KIDS DROPDOWN -->
-      <li class="dropdown">
-        <details>
-          <summary>Kids</summary>
-          <ul class="dropdown-content">
-            <li><a href="#">T-Shirts</a></li>
-            <li><a href="#">Shorts</a></li>
-            <li><a href="#">Shoes</a></li>
-            <li><a href="#">School Bags</a></li>
-            <li><a href="#">Hoodies</a></li>
-            <li><a href="#">Toys</a></li>
-          </ul>
-        </details>
-      </li>
+    <li><a href="#">Location</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Setting</a></li>
+  </ul>
+</nav>
 
-      <li><a href="#">Location</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Setting</a></li>
-    </ul>
-  </nav>
 
   <div class="container">
     <h2>Welcome to Our Store</h2>
