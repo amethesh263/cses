@@ -8,6 +8,8 @@ body {
 }
 container{
    border-style: solid;
+border-color: green;
+   
 }
 nav {
   background-color: #333;
