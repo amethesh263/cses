@@ -9,6 +9,7 @@ body {
 container{
    border-style: solid;
 border-color: green;
+   background-color: red;
    
 }
 nav {
