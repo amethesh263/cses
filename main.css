@@ -1,37 +1,40 @@
 /* ============================================
-   BASIC NAVBAR STYLING
+   GLOBAL
    ============================================ */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f1f1f1;
-   background-color: green;
 }
-#container{
-   border-style: solid;
-border-color: green;
-   background-color: transparent;
-   
-}
-nav {
+
+/* Navigation container */
+#nav-container {
+  width: 100%;
   background-color: #333;
+  border-bottom: 3px solid green;
+}
+
+/* Inner wrapper */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 10px;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
 /* ============================================
-   HAMBURGER ICON
+   HAMBURGER
    ============================================ */
 .hamburger {
   font-size: 28px;
   color: white;
   cursor: pointer;
   display: block;
-  width: fit-content;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
-/* hide checkbox */
 #menu-toggle {
   display: none;
 }
@@ -44,47 +47,43 @@ nav {
   padding: 0;
   margin: 0;
   background: #2f2f2f;
-  display: none; /* Hidden on mobile until toggled */
+  width: 100%;
+  display: none;
   border-radius: 8px;
-}
-
-.menu > li {
-  position: relative;
 }
 
 .menu a,
 summary {
   display: block;
   padding: 12px;
-  color: white;
   text-decoration: none;
+  color: white;
   border-bottom: 1px solid #444;
-  cursor: pointer;
 }
 
 .menu > li:last-child a {
   border-bottom: none;
 }
 
-/* Show menu when checkbox checked */
+/* Show menu when hamburger checked */
 #menu-toggle:checked ~ .menu {
   display: block;
 }
 
 /* ============================================
-   DROPDOWNS (details/summary)
+   DROPDOWN (mobile)
    ============================================ */
 .dropdown details {
   background: transparent;
 }
 
 .dropdown summary {
-  list-style: none;           /* remove default marker */
+  padding-right: 28px;
   position: relative;
-  padding-right: 28px;        /* space for caret */
+  list-style: none;
+  cursor: pointer;
 }
 
-/* Custom caret */
 .dropdown summary::after {
   content: "▾";
   position: absolute;
@@ -92,10 +91,9 @@ summary {
   top: 50%;
   transform: translateY(-50%);
   color: #ddd;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-/* Submenu base (mobile stacked) */
 .dropdown-content {
   list-style: none;
   padding: 0;
@@ -112,100 +110,70 @@ summary {
   border-bottom: none;
 }
 
-/* Hover/active states */
+/* hover colors */
 .menu a:hover,
 summary:hover {
   background: #4cafaa;
-  border-radius: 6px;
 }
 
 /* ============================================
-   DESKTOP MODE — HAMBURGER HIDDEN
+   DESKTOP MODE
    ============================================ */
 @media (min-width: 768px) {
+
   .hamburger {
     display: none;
   }
 
-  nav {
-    display: flex;
+  .nav-inner {
     justify-content: center;
-    align-items: center;
   }
 
   .menu {
     display: flex !important;
     background: none;
+    width: auto;
   }
 
   .menu > li {
-    margin: 0;
+    position: relative;
   }
 
   .menu a,
   summary {
-    padding: 10px 20px;
     border: none;
+    padding: 10px 18px;
   }
 
   /* Dropdown container */
-.dropdown {
-  position: relative;
+  .dropdown {
+    position: relative;
+  }
+
+  /* Hidden by default on desktop */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #444;
+    min-width: 180px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+  }
+
+  /* show on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background: #4cafaa;
+  }
 }
 
-/* Hide dropdown content by default */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #444;
-  min-width: 200px;
-  border-radius: 6px;
-  z-index: 1000;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Dropdown links */
-.dropdown-content li a {
-  padding: 10px 12px;
-  display: block;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid #555;
-}
-
-.dropdown-content li:last-child a {
-  border-bottom: none;
-}
-
-.dropdown-content li a:hover {
-  background: #4cafaa;
-  border-radius: 4px;
-}
-
-
-/* ============================================
-   MAIN CONTENT
-   ============================================ */
-.container {
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
-}
-
-/* ============================================
-   ACCESSIBILITY ENHANCEMENTS
-   ============================================ */
-/* Remove default triangle marker from summary (Firefox) */
+/* Fix Firefox arrow */
 summary::-webkit-details-marker {
   display: none;
 }
