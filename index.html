@@ -6,72 +6,83 @@
   <title>Store Navigation</title>
   <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-<nav id="container">
-  <div>
-  <nav role="navigation">
-  <input type="checkbox" id="menu-toggle" aria-hidden="true">
-  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
 
-  <ul class="menu">
-    <li><a href="homepage.html" class="active">Home</a></li>
+<!-- NAVIGATION BAR CONTAINER -->
+<div id="nav-container">
 
-    <!-- MEN DROPDOWN -->
-    <li class="dropdown">
-      <a href="#">Men</a>
-      <ul class="dropdown-content">
-        <li><a href="#">T-Shirts</a></li>
-        <li><a href="#">Jeans</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Jackets</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Sportswear</a></li>
-      </ul>
-        
-    </li>
+  <nav class="nav-inner" role="navigation">
 
-    <!-- WOMEN DROPDOWN -->
-    <li class="dropdown">
-      <a href="#">Women</a>
-      <ul class="dropdown-content">
-        <li><a href="#">Dresses</a></li>
-        <li><a href="#">Tops</a></li>
-        <li><a href="#">Skirts</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Handbags</a></li>
-        <li><a href="#">Jewelry</a></li>
-      </ul>
-    </li>
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+    <input type="checkbox" id="menu-toggle" aria-hidden="true">
 
-    <!-- KIDS DROPDOWN -->
-    <li class="dropdown">
-      <a href="#">Kids</a>
-      <ul class="dropdown-content">
-        <li><a href="#">T-Shirts</a></li>
-        <li><a href="#">Shorts</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">School Bags</a></li>
-        <li><a href="#">Hoodies</a></li>
-        <li><a href="#">Toys</a></li>
-      </ul>
-    </li>
+    <!-- Menu -->
+    <ul class="menu">
 
-    <li><a href="#">Location</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Setting</a></li>
-  </ul>
-    <input type="text" placeholder="Search.."> 
-</nav>
-  </div>
-</nav>
+      <li><a href="homepage.html" class="active">Home</a></li>
+
+      <!-- Men -->
+      <li class="dropdown">
+        <a href="#">Men</a>
+        <ul class="dropdown-content">
+          <li><a href="#">T-Shirts</a></li>
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Jackets</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Sportswear</a></li>
+        </ul>
+      </li>
+
+      <!-- Women -->
+      <li class="dropdown">
+        <a href="#">Women</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Tops</a></li>
+          <li><a href="#">Skirts</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Handbags</a></li>
+          <li><a href="#">Jewelry</a></li>
+        </ul>
+      </li>
+
+      <!-- Kids -->
+      <li class="dropdown">
+        <a href="#">Kids</a>
+        <ul class="dropdown-content">
+          <li><a href="#">T-Shirts</a></li>
+          <li><a href="#">Shorts</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">School Bags</a></li>
+          <li><a href="#">Hoodies</a></li>
+          <li><a href="#">Toys</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Location</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Setting</a></li>
+    </ul>
+
+    <!-- Search bar -->
+    <input type="text" class="search-box" placeholder="Search..">
+
+  </nav>
+</div>
+
+<!-- MAIN CONTENT -->
 <div class="container">
-    <h2>Welcome to Our Store</h2>
-    <p>Browse the categories for Men, Women, and Kids.</p>
-  </div>
+  <h2>Welcome to Our Store</h2>
+  <p>Browse the categories for Men, Women, and Kids.</p>
+</div>
 
 </body>
 </html>
+
 
 
 
