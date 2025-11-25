@@ -6,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f1f1f1;
 }
+#active     {background-color: green;}
 
 /* Navigation container */
 #nav-container {
