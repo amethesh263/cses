@@ -12,6 +12,7 @@ body {
   width: 100%;
   background-color: transparent;
   border-bottom: 3px solid blue;
+   border-width: 300px;
 }
 
 /* Inner wrapper */
