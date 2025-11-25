@@ -13,6 +13,8 @@ body {
   background-color: yellow;
   border-bottom: 3px solid blue;
    border-width: 300px;
+   border-height: auto;
+   
 }
 
 /* Inner wrapper */
